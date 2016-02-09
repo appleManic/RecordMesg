@@ -54,10 +54,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug8-UZ-0Fb">
+                                <rect key="frame" x="137" y="424" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y3R-A3-d97"/>
+                                    <constraint firstAttribute="width" constant="46" id="Zo9-pH-00H"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playAudioClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lr9-Yf-ZJu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ug8-UZ-0Fb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="HhV-6Y-8hy"/>
                             <constraint firstItem="fyd-vj-4f0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Zm6-Eh-sWX"/>
+                            <constraint firstItem="GD1-0v-k3B" firstAttribute="top" secondItem="ug8-UZ-0Fb" secondAttribute="bottom" constant="65" id="ueM-Fd-9HW"/>
                             <constraint firstItem="fyd-vj-4f0" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="vue-jX-1nP"/>
                         </constraints>
                     </view>

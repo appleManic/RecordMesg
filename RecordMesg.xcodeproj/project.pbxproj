@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A405A90D1C6A9E5C00C73FD2 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */; };
+		A4184A1E1C619378000E9F27 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */; };
 		A45E243B1C6029C0006BDAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */; };
 		A45E243D1C6029C0006BDAF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243C1C6029C0006BDAF4 /* FirstViewController.swift */; };
 		A45E243F1C6029C0006BDAF4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243E1C6029C0006BDAF4 /* SecondViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		A45E24371C6029C0006BDAF4 /* RecordMesg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordMesg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45E243C1C6029C0006BDAF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		A45E24391C6029C0006BDAF4 /* RecordMesg */ = {
 			isa = PBXGroup;
 			children = (
+				A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */,
+				A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */,
 				A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */,
 				A45E246C1C6055A6006BDAF4 /* RecordingViewController.swift */,
 				A45E243C1C6029C0006BDAF4 /* FirstViewController.swift */,
@@ -193,6 +199,7 @@
 		A45E242F1C6029C0006BDAF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pawan Selokar";
@@ -262,9 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A405A90D1C6A9E5C00C73FD2 /* AudioManager.swift in Sources */,
 				A45E246D1C6055A6006BDAF4 /* RecordingViewController.swift in Sources */,
 				A45E243F1C6029C0006BDAF4 /* SecondViewController.swift in Sources */,
 				A45E243B1C6029C0006BDAF4 /* AppDelegate.swift in Sources */,
+				A4184A1E1C619378000E9F27 /* UIImage+Resize.swift in Sources */,
 				A45E243D1C6029C0006BDAF4 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
