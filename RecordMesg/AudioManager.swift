@@ -45,6 +45,24 @@ final class AudioManager: NSObject {
         }
     }
     
+    func deleteAudio(){
+        let filemgr = NSFileManager.defaultManager()
+        let documentsURL = filemgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("sound.caf")
+        let filePath = fileURL.path
+        if filemgr.fileExistsAtPath(filePath!) {
+            print("File exits")
+            do{
+                try filemgr.removeItemAtURL(fileURL)
+                print("File exits \(filePath!)")
+            }catch{
+                print("audioSession error: \(error)")
+            }
+        }else {
+            print("No file is there")
+        }
+    }
+    
      func recordAudio(){
         if recorder?.recording == false {
             recorder?.record()

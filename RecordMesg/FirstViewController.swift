@@ -51,7 +51,9 @@ class FirstViewController: UIViewController {
         AudioManager.sharedInstance.playAudio()
     }
     
-    
+    @IBAction func stopClicked(sender: AnyObject) {
+        AudioManager.sharedInstance.deleteAudio()
+    }
     
    private func cancelRecording(){
     
