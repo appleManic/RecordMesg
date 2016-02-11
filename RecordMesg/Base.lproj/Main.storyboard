@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-vj-4f0">
-                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <rect key="frame" x="85" y="109" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.86649362664473684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Gme-RR-ztF"/>
@@ -35,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3T-K5-aCd">
-                                <rect key="frame" x="200" y="101" width="100" height="100"/>
+                                <rect key="frame" x="220" y="28" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.80142372532894723" green="0.86649362664473684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Edit"/>
                                 <userDefinedRuntimeAttributes>
@@ -43,9 +44,12 @@
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="6iD-Kv-e36"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bz-WG-1Vz">
-                                <rect key="frame" x="20" y="101" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.80142372529999995" green="0.86649362659999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Cancel"/>
                                 <userDefinedRuntimeAttributes>
@@ -53,23 +57,32 @@
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="q7D-fW-54U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug8-UZ-0Fb">
-                                <rect key="frame" x="137" y="424" width="46" height="30"/>
+                                <rect key="frame" x="100" y="374" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.80142372529999995" green="0.86649362659999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Y3R-A3-d97"/>
-                                    <constraint firstAttribute="width" constant="46" id="Zo9-pH-00H"/>
+                                    <constraint firstAttribute="width" constant="120" id="fQd-Ww-lv9"/>
+                                    <constraint firstAttribute="height" constant="120" id="gfb-GG-V1Z"/>
                                 </constraints>
                                 <state key="normal" title="Play"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playAudioClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lr9-Yf-ZJu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdY-Y0-tRG">
-                                <rect key="frame" x="227" y="424" width="46" height="30"/>
+                                <rect key="frame" x="268" y="426" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="1ei-lU-PQD"/>
-                                    <constraint firstAttribute="height" constant="30" id="2or-8o-5kC"/>
+                                    <constraint firstAttribute="width" constant="46" id="9id-kN-auZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ega-7S-cfH"/>
                                 </constraints>
                                 <state key="normal" title="Stop"/>
                                 <connections>
@@ -79,18 +92,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GD1-0v-k3B" firstAttribute="top" secondItem="CdY-Y0-tRG" secondAttribute="bottom" constant="65" id="0bX-Rz-wFy"/>
-                            <constraint firstItem="CdY-Y0-tRG" firstAttribute="leading" secondItem="ug8-UZ-0Fb" secondAttribute="trailing" constant="44" id="5q9-Eo-7IP"/>
-                            <constraint firstItem="ug8-UZ-0Fb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="HhV-6Y-8hy"/>
+                            <constraint firstItem="GD1-0v-k3B" firstAttribute="top" secondItem="CdY-Y0-tRG" secondAttribute="bottom" constant="63" id="DSc-Kb-obu"/>
+                            <constraint firstItem="ug8-UZ-0Fb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="PMu-Zm-yj0"/>
                             <constraint firstItem="fyd-vj-4f0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Zm6-Eh-sWX"/>
-                            <constraint firstItem="GD1-0v-k3B" firstAttribute="top" secondItem="ug8-UZ-0Fb" secondAttribute="bottom" constant="65" id="ueM-Fd-9HW"/>
-                            <constraint firstItem="fyd-vj-4f0" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="vue-jX-1nP"/>
+                            <constraint firstItem="ug8-UZ-0Fb" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="150" id="fpE-ds-tz0"/>
+                            <constraint firstItem="CdY-Y0-tRG" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" constant="10" id="vUg-e9-dKO"/>
+                            <constraint firstItem="fyd-vj-4f0" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-100" id="vue-jX-1nP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="cancelButton" destination="3bz-WG-1Vz" id="a52-V0-Z0P"/>
                         <outlet property="editButton" destination="F3T-K5-aCd" id="KAv-PF-xfg"/>
+                        <outlet property="playButton" destination="ug8-UZ-0Fb" id="8te-6T-DVo"/>
                         <outlet property="recordButton" destination="fyd-vj-4f0" id="TsL-Ru-2PH"/>
                     </connections>
                 </viewController>
@@ -101,7 +115,7 @@
         <!--Recording View Controller-->
         <scene sceneID="zqi-lS-7du">
             <objects>
-                <viewController id="Fqe-S1-QBd" customClass="RecordingViewController" customModule="RecordMesg" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="recordingView" id="Fqe-S1-QBd" customClass="RecordingViewController" customModule="RecordMesg" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H2k-ef-0Ea"/>
                         <viewControllerLayoutGuide type="bottom" id="jab-BZ-hvV"/>
@@ -109,12 +123,29 @@
                     <view key="view" contentMode="scaleToFill" id="DXZ-HG-vv3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAl-Iv-bcB">
+                                <rect key="frame" x="244" y="20" width="60" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hGf-FM-tzb"/>
+                                    <constraint firstAttribute="height" constant="31" id="k7t-UQ-OPW"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="Fqe-S1-QBd" eventType="touchUpInside" id="Fw3-r7-QAm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lAl-Iv-bcB" firstAttribute="top" secondItem="H2k-ef-0Ea" secondAttribute="bottom" id="A4s-CI-gEQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lAl-Iv-bcB" secondAttribute="trailing" id="DaX-qs-fUk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5m-wG-yhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.86666666666667" y="-324.70666666666665"/>
+            <point key="canvasLocation" x="781" y="-325"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -128,27 +159,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="55" y="263" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="52" y="313" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWk-C8-hlK">
+                                <rect key="frame" x="110" y="234" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.86649362659999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G29-0X-VrB"/>
+                                    <constraint firstAttribute="height" constant="100" id="Gcw-Eb-LYj"/>
+                                </constraints>
+                                <state key="normal" title="Click it!"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="8rJ-Kc-sve" eventType="touchDown" id="sK2-PB-dAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiZ-Nx-e53">
+                                <rect key="frame" x="110" y="419" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gR8-Oh-TtJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="gbk-6p-ini"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cWk-C8-hlK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="MKZ-E7-3AP"/>
+                            <constraint firstItem="hiZ-Nx-e53" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="T7p-j7-3fZ"/>
+                            <constraint firstItem="JZe-il-GTV" firstAttribute="top" secondItem="hiZ-Nx-e53" secondAttribute="bottom" constant="50" id="uuU-c7-bfA"/>
+                            <constraint firstItem="cWk-C8-hlK" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="wUl-Mw-kfy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="340.80000000000001"/>
+            <point key="canvasLocation" x="400" y="340"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

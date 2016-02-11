@@ -4,7 +4,6 @@
 //
 //  Created by Pawan Selokar on 2/9/16.
 //  Copyright © 2016 Pawan Selokar. All rights reserved.
-//
 
 import Foundation
 import AVFoundation
@@ -12,12 +11,22 @@ import AVFoundation
 final class AudioManager: NSObject {
     var player: AVAudioPlayer!
     var recorder: AVAudioRecorder!
+     var isFileExist = true
     static let sharedInstance = AudioManager()
     
     override init(){
         let filemgr = NSFileManager.defaultManager()
         let documentsURL = filemgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let fileURL = documentsURL.URLByAppendingPathComponent("sound.caf")
+        do {
+            let fileDirectory = try filemgr.attributesOfFileSystemForPath(fileURL.path!)
+            let fileSize = fileDirectory[NSFileSize]
+            if fileSize == nil {
+                isFileExist = false
+            }
+        }catch{
+            print("file is not present")
+        }
         
         let recordSettings = [AVEncoderAudioQualityKey: AVAudioQuality.Min.rawValue,
             AVEncoderBitRateKey: 16,
@@ -34,7 +43,7 @@ final class AudioManager: NSObject {
         
         do{
             try recorder = AVAudioRecorder(URL: fileURL, settings: recordSettings as! [String : AnyObject])
-        }catch{
+        }catch {
             print("audioSession error: \(error)")
         }
         
@@ -70,7 +79,7 @@ final class AudioManager: NSObject {
     }
     
      func stopAudio(){
-        
+        print("stop Audio")
         if recorder?.recording == true {
             recorder?.stop()
         } else {
