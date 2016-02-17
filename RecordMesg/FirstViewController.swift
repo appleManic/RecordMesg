@@ -25,7 +25,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          print("FirstViewController ViewDidLoad")
-      let bool = AudioManager.sharedInstance.isFileExist
+       let bool = AudioManager.sharedInstance.isFileExist
         isPlaying = false
         recordButton.enabled = true
         playButton.enabled = false
@@ -76,7 +76,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func recordingButtonClicked(sender: UIButton) {
         print("recordingButtonClicked")
-         record()
+        record()
     }
     
     @IBAction func cancelButtonClicked(sender: UIButton) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A405A90D1C6A9E5C00C73FD2 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */; };
 		A4184A1E1C619378000E9F27 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */; };
+		A41DF4A71C73BE9100A79CF8 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DF4A61C73BE9100A79CF8 /* SetViewController.swift */; };
 		A45E243B1C6029C0006BDAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */; };
 		A45E243D1C6029C0006BDAF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243C1C6029C0006BDAF4 /* FirstViewController.swift */; };
 		A45E243F1C6029C0006BDAF4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E243E1C6029C0006BDAF4 /* SecondViewController.swift */; };
@@ -18,6 +19,7 @@
 		A45E24521C6029C0006BDAF4 /* RecordMesgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E24511C6029C0006BDAF4 /* RecordMesgTests.swift */; };
 		A45E245D1C6029C0006BDAF4 /* RecordMesgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E245C1C6029C0006BDAF4 /* RecordMesgUITests.swift */; };
 		A45E246D1C6055A6006BDAF4 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E246C1C6055A6006BDAF4 /* RecordingViewController.swift */; };
+		A47EDD681C6E84BB001A5359 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EDD671C6E84BB001A5359 /* CustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 /* Begin PBXFileReference section */
 		A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		A41DF4A61C73BE9100A79CF8 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		A45E24371C6029C0006BDAF4 /* RecordMesg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordMesg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45E243C1C6029C0006BDAF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		A45E245C1C6029C0006BDAF4 /* RecordMesgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMesgUITests.swift; sourceTree = "<group>"; };
 		A45E245E1C6029C0006BDAF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A45E246C1C6055A6006BDAF4 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		A47EDD671C6E84BB001A5359 /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		A45E24391C6029C0006BDAF4 /* RecordMesg */ = {
 			isa = PBXGroup;
 			children = (
+				A41DF4A61C73BE9100A79CF8 /* SetViewController.swift */,
+				A47EDD671C6E84BB001A5359 /* CustomLayout.swift */,
 				A405A90C1C6A9E5C00C73FD2 /* AudioManager.swift */,
 				A4184A1D1C619378000E9F27 /* UIImage+Resize.swift */,
 				A45E243A1C6029C0006BDAF4 /* AppDelegate.swift */,
@@ -270,9 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A405A90D1C6A9E5C00C73FD2 /* AudioManager.swift in Sources */,
+				A47EDD681C6E84BB001A5359 /* CustomLayout.swift in Sources */,
 				A45E246D1C6055A6006BDAF4 /* RecordingViewController.swift in Sources */,
 				A45E243F1C6029C0006BDAF4 /* SecondViewController.swift in Sources */,
 				A45E243B1C6029C0006BDAF4 /* AppDelegate.swift in Sources */,
+				A41DF4A71C73BE9100A79CF8 /* SetViewController.swift in Sources */,
 				A4184A1E1C619378000E9F27 /* UIImage+Resize.swift in Sources */,
 				A45E243D1C6029C0006BDAF4 /* FirstViewController.swift in Sources */,
 			);

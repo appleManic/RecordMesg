@@ -74,6 +74,7 @@ final class AudioManager: NSObject {
     
      func recordAudio(){
         if recorder?.recording == false {
+            recorder?.delegate = self
             recorder?.record()
         }
     }
@@ -106,6 +107,13 @@ final class AudioManager: NSObject {
     }
 }
 
+extension AudioManager: AVAudioRecorderDelegate {
+    //After interruption ie phone call
+    func audioRecorderEndInterruption(recorder: AVAudioRecorder, withFlags flags: Int) {
+        stopAudio()
+    }
+}
+
 extension AudioManager: AVAudioPlayerDelegate{
     @objc func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         print("audioPlayerDidFinishPlaying")
@@ -117,10 +125,10 @@ extension AudioManager: AVAudioPlayerDelegate{
         print("Audio Play Decode Error")
     }
     
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
     }
     
-    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!, error: NSError!) {
+    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder, error: NSError?) {
         print("Audio Record Encode Error")
     }
 
