@@ -73,7 +73,7 @@ extension RecordingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.item)
         
-        AudioManager.sharedInstance.playAudio()
+        // AudioManager.sharedInstance.playAudio()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("custom")

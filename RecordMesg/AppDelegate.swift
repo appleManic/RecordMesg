@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-       AudioManager.sharedInstance.stopAudio()
+        // AudioManager.sharedInstance.stopAudio()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

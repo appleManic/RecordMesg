@@ -34,7 +34,7 @@ final class AudioManager: NSObject {
 //            AVEncoderBitRateKey: 16,
 //            AVNumberOfChannelsKey:2,
 //            AVSampleRateKey:44100.0]
-//        var error: NSError!
+//       
 //        
 //        let audioSession = AVAudioSession.sharedInstance()
 //        do{
@@ -49,64 +49,64 @@ final class AudioManager: NSObject {
 //            print("audioSession error: \(error)")
 //        }
 //        
-//        if let err = error {
-//            print("Error \(err.localizedDescription)")
-//        }else {
-//            recorder?.prepareToRecord()
-//        }
+////        if let err = error {
+////            print("Error \(err.localizedDescription)")
+////        }else {
+////            recorder?.prepareToRecord()
+////        }
     }
     
-//    func deleteAudio(){
-//        let filemgr = NSFileManager.defaultManager()
-//        let documentsURL = filemgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-//        let fileURL = documentsURL.URLByAppendingPathComponent("sound.caf")
-//        let filePath = fileURL.path
-//        if filemgr.fileExistsAtPath(filePath!) {
-//            print("File exits")
-//            do{
-//                try filemgr.removeItemAtURL(fileURL)
-//                print("File exits \(filePath!)")
-//            }catch{
-//                print("audioSession error: \(error)")
-//            }
-//        }else {
-//            print("No file is there")
-//        }
-//    }
+    func deleteAudio(){
+        let filemgr = NSFileManager.defaultManager()
+        let documentsURL = filemgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("sound.caf")
+        let filePath = fileURL.path
+        if filemgr.fileExistsAtPath(filePath!) {
+            print("File exits")
+            do{
+                try filemgr.removeItemAtURL(fileURL)
+                print("File exits \(filePath!)")
+            }catch{
+                print("audioSession error: \(error)")
+            }
+        }else {
+            print("No file is there")
+        }
+    }
     
-//     func recordAudio(){
-//        if recorder?.recording == false {
-//            recorder?.delegate = self
-//            recorder?.record()
-//        }
-//    }
+     func recordAudio(){
+        if recorder?.recording == false {
+            recorder?.delegate = self
+            recorder?.record()
+        }
+    }
     
-//     func stopAudio(){
-//        print("stop Audio")
-//        if recorder?.recording == true {
-//            recorder?.stop()
-//        } else {
-//            player?.stop()
-//        }
-//    }
+     func stopAudio(){
+        print("stop Audio")
+        if recorder?.recording == true {
+            recorder?.stop()
+        } else {
+            player?.stop()
+        }
+    }
     
-//     func playAudio(){
-//        print("Play Audio")
-//        if recorder?.recording == false {
-//            var error: NSError?
-//            do{
-//                try player = AVAudioPlayer(contentsOfURL: (recorder?.url)!, fileTypeHint: "caf")
-//                player.delegate = self
-//            }catch {
-//                print("error: \(error)")
-//            }
-//            if let err = error {
-//                print("audioPlayer error: \(err.localizedDescription)")
-//            } else {
-//                player?.play()
-//            }
-//        }
-//    }
+     func playAudio(){
+        print("Play Audio")
+        if recorder?.recording == false {
+            var error: NSError?
+            do{
+                try player = AVAudioPlayer(contentsOfURL: (recorder?.url)!, fileTypeHint: "caf")
+                player.delegate = self
+            }catch {
+                print("error: \(error)")
+            }
+            if let err = error {
+                print("audioPlayer error: \(err.localizedDescription)")
+            } else {
+                player?.play()
+            }
+        }
+    }
 }
 
 extension AudioManager: AVAudioRecorderDelegate {
