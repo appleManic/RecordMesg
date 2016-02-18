@@ -60,18 +60,18 @@ class FirstViewController: UIViewController {
         playButton.enabled = true
         isPlaying = !isPlaying
         if isPlaying! {
-            playButton.backgroundColor = UIColor.greenColor()
-            AudioManager.sharedInstance.playAudio()
-            outwardAnimation()
+//            playButton.backgroundColor = UIColor.greenColor()
+//            AudioManager.sharedInstance.playAudio()
+//            outwardAnimation()
         }else {
-            playButton.backgroundColor = UIColor.redColor()
-            AudioManager.sharedInstance.stopAudio()
-            inwardAnimation()
+//            playButton.backgroundColor = UIColor.redColor()
+//            AudioManager.sharedInstance.stopAudio()
+//            inwardAnimation()
         }
     }
     
     @IBAction func stopClicked(sender: AnyObject) {
-        AudioManager.sharedInstance.deleteAudio()
+        //  AudioManager.sharedInstance.deleteAudio()
     }
     
     @IBAction func recordingButtonClicked(sender: UIButton) {
@@ -80,12 +80,12 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func cancelButtonClicked(sender: UIButton) {
-        cancelRecording()
-        playButton.enabled = false
+//        cancelRecording()
+//        playButton.enabled = false
     }
     
     @IBAction func editButtonClicked(sender: UIButton) {
-        EditRecording()
+        // EditRecording()
     }
 }
 
@@ -148,22 +148,22 @@ private extension FirstViewController {
         presentViewController(viewController, animated: true, completion: nil)
     }
     
-    func record(){
-        print("Record")
-        recordButton.enabled = true
-        isRecording = !isRecording
-        if !isRecording {
-            print("Its Not Recording")
-            playButton.enabled = true
-            recordButton.backgroundColor = UIColor.redColor()
-            AudioManager.sharedInstance.stopAudio()
-        }else {
-            print("Its Recording")
-            playButton.enabled = false
-            recordButton.backgroundColor = UIColor.greenColor()
-            AudioManager.sharedInstance.recordAudio()
-        }
-    }
+//    func record(){
+//        print("Record")
+//        recordButton.enabled = true
+//        isRecording = !isRecording
+//        if !isRecording {
+//            print("Its Not Recording")
+//            playButton.enabled = true
+//            recordButton.backgroundColor = UIColor.redColor()
+//            AudioManager.sharedInstance.stopAudio()
+//        }else {
+//            print("Its Recording")
+//            playButton.enabled = false
+//            recordButton.backgroundColor = UIColor.greenColor()
+//            AudioManager.sharedInstance.recordAudio()
+//        }
+//    }
 }
 
 
